@@ -1,0 +1,24 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+  {{post.title}} - {{block.super}}
+{% endblock %}
+
+{% block content %}
+
+      <h1 class="mb-5">
+          <div class="card">
+              <div class="card-body">
+                  <i class="material-icons" style="font-size:24px">import_contacts</i>{{post.title}}
+          </div>
+        </div>
+      </h1>
+      <div class="card mb-5">
+        <div class="card-body">
+          <p>{{post.body}}</p>
+          <p>Date of publication: {{post.date_pub}}</p>
+        </div>
+        
+      </div>
+   
+{% endblock %}

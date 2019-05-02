@@ -1,0 +1,28 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    Create Post - {{block.super}}
+{% endblock %}
+
+{% block content %}
+    <!-- action - та вьюха которая будет обрабатывать данные этой формы -->
+    <form action="{% url 'post_create_url' %}" method="POST">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-group">
+                <!-- проверяю если ошибки у полей формы -->
+                {% if field.err %}
+                    <div class="alert alert-danger"></div>
+                        {{field.errors}}
+                    
+                {% endif %}
+                {{field.label}} 
+                {{field}}
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Create post</button>
+    </form>
+
+
+{% endblock %}
