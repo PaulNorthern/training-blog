@@ -25,7 +25,7 @@ SECRET_KEY = '$w7%7tlx3ep2n)a!6e22_4-%bs3s9mnvs)8fp))&*t=8*i(kjz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rekso4.pythonanywhere.com']
+ALLOWED_HOSTS = ['rekso4.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition

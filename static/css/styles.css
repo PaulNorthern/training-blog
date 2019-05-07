@@ -23,3 +23,21 @@ a.edit, a.delete {
     display: none; 
     /* кнопкам с классам в base_blog отключаю отображение блоков */
 }
+
+
+.full-height-wrapper{
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+    padding-bottom: calc(3.5rem + 15px);
+}
+
+.page-footer{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+}
